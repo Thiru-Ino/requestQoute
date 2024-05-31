@@ -1,0 +1,17 @@
+<div>
+  <h2>Price Updates</h2>
+  <ul>
+    <li *ngFor="let currency of priceUpdates">
+      {{ currency.name }}: {{ currency.price | number:'1.2-2' }}
+    </li>
+  </ul>
+</div>
+
+<div>
+  <button (click)="onCurrencyButtonClick('INR')">INR</button>
+  <button (click)="onCurrencyButtonClick('USD')">USD</button>
+  <button (click)="onCurrencyButtonClick('SGD')">SGD</button>
+  <button (click)="onCurrencyButtonClick('EUR')">EUR</button>
+  <button (click)="onCurrencyButtonClick('AUD')">AUD</button>
+  <button (click)="onCurrencyButtonClick('GBP')">GBP</button>
+</div>
